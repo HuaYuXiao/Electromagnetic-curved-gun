@@ -2,9 +2,11 @@
 
 ## 电磁炮制作
 No matter what the scoring point is, the electromagnetic cannon is a must. But we took advantage of it and bought a finished kit directly online. As shown in the picture.
+
 ![image](https://user-images.githubusercontent.com/117464811/231820150-0d2388d1-ac9a-4043-a3d9-c709343d382c.png)
 
 The principle is still relatively simple, the boost charges the capacitor, and the capacitor generates a magnetic field through the coil, and the magnetic field attracts the steel ball. But after the stuff came back, we made some changes.
+
 ![image](https://user-images.githubusercontent.com/117464811/231820176-466c884c-217b-484c-8af9-958f97e4cc85.png)
 
 ### 线圈
@@ -14,6 +16,7 @@ Because the inner diameter of the tube equipped by the merchant is not 10mm (the
 
 #### coil parameters
 we decided to go around 8 layers, each layer 30 turns, a total of 240 turns, and then after the guidance of the great god, this number of turns is within a reasonable range. If you go around, 200-300 is fine. If the number of turns is large, the resistance will also be large, and the effect is not necessarily better.
+
 #### The diameter of the enameled wire 
 we chose is 1mm, and some students use 0.8mm, which has been proved to be usable.
 
