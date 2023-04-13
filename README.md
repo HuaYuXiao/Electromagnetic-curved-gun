@@ -1,4 +1,4 @@
-# Electromagnetic-curved-gun-in-Arduino
+# Electromagnetic-curved-gun
 
 ## 电磁炮制作
 No matter what the scoring point is, the electromagnetic cannon is a must. But we took advantage of it and bought a finished kit directly online. As shown in the picture.
