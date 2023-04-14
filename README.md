@@ -1,6 +1,7 @@
 # Electromagnetic-curved-gun
 
-## 电磁炮制作
+## Electromagnetic cannon production
+
 No matter what the scoring point is, the electromagnetic cannon is a must. But we took advantage of it and bought a finished kit directly online. As shown in the picture.
 
 ![image](https://user-images.githubusercontent.com/117464811/231820150-0d2388d1-ac9a-4043-a3d9-c709343d382c.png)
@@ -9,7 +10,8 @@ The principle is still relatively simple, the boost charges the capacitor, and t
 
 ![image](https://user-images.githubusercontent.com/117464811/231820176-466c884c-217b-484c-8af9-958f97e4cc85.png)
 
-### 线圈
+### Coil
+
 Because the inner diameter of the tube equipped by the merchant is not 10mm (the title requires 10mm-15mm), we have to rewind. The plastic tube used for the tube. We decided to use a 10mm inner diameter after a simple discussion, and then the projectile also used a 10mm steel ball, because the first feeling is that the smaller the better, the smaller the less energy required. It turns out that sometimes the first feeling is not necessarily optimal. you can install a laser pointer on the barrel to facilitate debugging.
 
 ![image](https://user-images.githubusercontent.com/117464811/231820351-0566b2e8-c7fd-4cfa-990d-da94fd772923.png)
@@ -22,37 +24,38 @@ we chose is 1mm, and some students use 0.8mm, which has been proved to be usable
 
 If the enameled wire is not easy to fix, you can put on 502 glue, as for both sides, you can try electrical glue, or 3M tape stacked, or other things that can be stuck. We ended up carving the cards with an engraving machine.
 
-### 主控及模块
+### Master and modules
 
-#### 主控 
-我们自己画了一个STM32F407核心板。
+#### Master 
+We drew an STM32F407 core board ourselves.
 
-#### 视觉 
-我们买了OPENMV，比赛的时候我们用的长焦镜头。the image processing uses a simple algorithm to find color patches. The test is responsible for receiving the data of the module.
+#### Visual 
+We bought OPENMV, the telephoto lens we used for the race. the image processing uses a simple algorithm to find color patches. The test is responsible for receiving the data of the module.
 
-#### 测距 
-这个用的激光测距模块。有人用超声波模块，可能效果不太好。OpenMV and laser ranging are placed on the first stage servo disk, only the yaw angle, and the laser ranging we rack to be about the same height as the marker.
+#### Ranging 
+This is the laser ranging module. Some people use ultrasonic modules, which may not work well. OpenMV and laser ranging are placed on the first stage servo disk, only the yaw angle, and the laser ranging we rack to be about the same height as the marker.
 
-#### 键盘 
-一般人都用的矩阵键盘，我们买了串口屏。串口屏的好处是，简单易上手，不用写矩阵键盘的行列扫描程序。
+#### keyboard 
+The matrix keyboard that ordinary people use, we bought the serial port screen. The advantage of serial port screen is that it is simple and easy to use, and there is no need to write the row and column scanner of the matrix keyboard.
 
 ![image](https://user-images.githubusercontent.com/117464811/231821414-18186a1d-1d53-4c85-b650-2d34a519d3a3.png)
 
-#### 云台 
-这个网上有一个做的不错的。事实上，普通的两个舵机的也能用，因为我们基本上都选择了只把炮口放最后一级舵机上。所以重量不是很大，它对系统的要求是，射的时候要稳，毕竟有一些小小的冲击力，会让精度下降。我们组最后选择了用两个42步进伺服电机做动力，优点是力矩大，缺点是得有起始点的卡位，而舵机的脉冲宽和角度直接对应。餐桌转盘轴承的确好用。
+#### Gimbal 
+This online one has a nice job done. Ordinary two-servo ones can also be used, because we basically chose to put only the muzzle on the last stage of the servo. So the weight is not very large, and its requirements for the system are to be stable when shooting, after all, there are some small impacts, which will reduce the accuracy. Our group finally chose to use two 42-step servo motors as power, the advantage is that the torque is large, the disadvantage is that there must be a starting point of the card position, and the pulse width and angle of the servo directly correspond. Table turntable bearings are indeed easy to use.
 
 ![image](https://user-images.githubusercontent.com/117464811/231821549-74fd50f2-a9c8-4ee3-9dfb-d0b5e30f064c.png)
 
-## 测试调试加填坑
+## Test debugging plus fill pits
 
-### 弹丸选择
+### Projectile selection
+
 Regarding the projectile material and shape, we directly chose steel balls. Maybe someone will use steel columns or bullet shapes?
 
 There are some steel balls on Taobao that are not made of the same material, and the coil is not attractive to them. This steel ball looks brighter and does not rust so easily.
 
 Then the diameter of the steel ball, we chose the same 10mm as the inner diameter of the tube at the beginning. After experiments, it was found that if the diameter of the steel ball is smaller, the accuracy is better. So we chose 6mm later, as for why not use 8mm, because 8mm bought fakes, can't suck ... My guess is: the steel ball is bigger, and there will be more friction with the tube, so the accuracy is affected.
 
-### 弹丸初始位置
+### Initial position of the projectile
 
 Where is it better to place the projectile at the beginning of the coil?
 
@@ -60,7 +63,8 @@ After trial and error, we found that half of the steel ball into the coil can hi
 
 When the position is selected, everyone must fix the limit to death. Otherwise, it will affect the curve fitting later
 
-### 发射模式选择与adc采电压
+### Transmit mode selection and ADC voltage
+
 Launch mode, there are currently two options. From the experimental data, both can be fitted with. 
 
 One is to change the voltage at a fixed angle. 
@@ -81,7 +85,8 @@ Both modes rely heavily on one thing: accurate and timely measurement of voltage
 
 The solution is, first, the power supply of the ADC is stable, and the average number of filters of the AD software is a little more. Our approach is not to use ADC, use a comparator, one end of the comparator is connected to the voltage of the capacitor, the other end is set with a sliding rheostat (after setting, there is no need to change), the output of the comparator is connected to a solenoid valve, and the solenoid valve is used as a control switch. Perfect to avoid the pit of AD sampling.
 
-### 曲线拟合
+### Curve fitting
+
 Theoretically, the relationship between distance and angle is an implicit function. We tried to solve it, and then found that it was better to fit the big method.
 
 ![image](https://user-images.githubusercontent.com/117464811/231823639-f40643b3-4407-40a4-b69a-e8a65096db96.png)
