@@ -25,13 +25,13 @@ If the enameled wire is not easy to fix, you can put on 502 glue, as for both si
 ### 主控及模块
 
 #### 主控 
-我们自己画了一个STM32F407核心板。没有的同学完全可以用网上买的核心板。
+我们自己画了一个STM32F407核心板。
 
 #### 视觉 
-毫无疑问的我们买了OPENMV，比赛的时候我们用的长焦镜头。the image processing uses a simple algorithm to find color patches. The test is responsible for receiving the data of the module.
+我们买了OPENMV，比赛的时候我们用的长焦镜头。the image processing uses a simple algorithm to find color patches. The test is responsible for receiving the data of the module.
 
 #### 测距 
-这个用的激光测距模块，有点小贵。有人用超声波模块，可能效果不太好。OpenMV and laser ranging are placed on the first stage servo disk, only the yaw angle, and the laser ranging we rack to be about the same height as the marker.
+这个用的激光测距模块。有人用超声波模块，可能效果不太好。OpenMV and laser ranging are placed on the first stage servo disk, only the yaw angle, and the laser ranging we rack to be about the same height as the marker.
 
 #### 键盘 
 一般人都用的矩阵键盘，我们买了串口屏。串口屏的好处是，简单易上手，不用写矩阵键盘的行列扫描程序。
@@ -39,8 +39,7 @@ If the enameled wire is not easy to fix, you can put on 502 glue, as for both si
 ![image](https://user-images.githubusercontent.com/117464811/231821414-18186a1d-1d53-4c85-b650-2d34a519d3a3.png)
 
 #### 云台 
-这个网上有一个做的不错的。事实上，普通的两个舵机的也能用，因为我们基本上都选择了只把炮口放最后一级舵机上。所以重量不是很大，它对系统的要求是，射的时候要稳，毕竟有一些小小的冲击力，会让精度下降。
-不过由于我们学校比较有钱，所以我们组最后选择了用两个42步进伺服电机做动力，优点是力矩大，缺点是得有起始点的卡位，而舵机的脉冲宽和角度直接对应。餐桌转盘轴承的确好用。
+这个网上有一个做的不错的。事实上，普通的两个舵机的也能用，因为我们基本上都选择了只把炮口放最后一级舵机上。所以重量不是很大，它对系统的要求是，射的时候要稳，毕竟有一些小小的冲击力，会让精度下降。我们组最后选择了用两个42步进伺服电机做动力，优点是力矩大，缺点是得有起始点的卡位，而舵机的脉冲宽和角度直接对应。餐桌转盘轴承的确好用。
 
 ![image](https://user-images.githubusercontent.com/117464811/231821549-74fd50f2-a9c8-4ee3-9dfb-d0b5e30f064c.png)
 
@@ -63,6 +62,7 @@ When the position is selected, everyone must fix the limit to death. Otherwise, 
 
 ### 发射模式选择与adc采电压
 Launch mode, there are currently two options. From the experimental data, both can be fitted with. 
+
 One is to change the voltage at a fixed angle. 
 
 ![image](https://user-images.githubusercontent.com/117464811/231822309-a35beae1-3b57-4249-9cdb-e1e2029c8b34.png)
