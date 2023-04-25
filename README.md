@@ -27,10 +27,11 @@ If the enameled wire is not easy to fix, you can put on 502 glue, as for both si
 ### Master and modules
 
 #### Master 
-We drew an STM32F407 core board ourselves.
+
+Arduino UNO
 
 #### Visual 
-We bought OPENMV, the telephoto lens we used for the race. the image processing uses a simple algorithm to find color patches. The test is responsible for receiving the data of the module.
+OPENMV. The image processing uses a simple algorithm to find color patches. The test is responsible for receiving the data of the module.
 
 #### Ranging 
 This is the laser ranging module. Some people use ultrasonic modules, which may not work well. OpenMV and laser ranging are placed on the first stage servo disk, only the yaw angle, and the laser ranging we rack to be about the same height as the marker.
