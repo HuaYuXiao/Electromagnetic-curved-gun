@@ -1,6 +1,10 @@
 # Electromagnetic-curved-gun
 
-## Electromagnetic cannon production
+![image](https://user-images.githubusercontent.com/117464811/231820176-466c884c-217b-484c-8af9-958f97e4cc85.png)
+
+## Basic modules
+
+### electromagnetic cannon
 
 No matter what the scoring point is, the electromagnetic cannon is a must. But we took advantage of it and bought a finished kit directly online. As shown in the picture.
 
@@ -8,43 +12,26 @@ No matter what the scoring point is, the electromagnetic cannon is a must. But w
 
 The principle is still relatively simple, the boost charges the capacitor, and the capacitor generates a magnetic field through the coil, and the magnetic field attracts the steel ball. But after the stuff came back, we made some changes.
 
-![image](https://user-images.githubusercontent.com/117464811/231820176-466c884c-217b-484c-8af9-958f97e4cc85.png)
+### Master 
+
+Arduino UNO
+
+### Visual 
+OPENMV. The image processing uses a simple algorithm to find color patches. The test is responsible for receiving the data of the module.
+
+### Ranging 
+This is the laser ranging module. Some people use ultrasonic modules, which may not work well. OpenMV and laser ranging are placed on the first stage servo disk, only the yaw angle, and the laser ranging we rack to be about the same height as the marker.
+
+### Gimbal 
+This online one has a nice job done. Ordinary two-servo ones can also be used, because we basically chose to put only the muzzle on the last stage of the servo. So the weight is not very large, and its requirements for the system are to be stable when shooting, after all, there are some small impacts, which will reduce the accuracy. Our group finally chose to use two 42-step servo motors as power, the advantage is that the torque is large, the disadvantage is that there must be a starting point of the card position, and the pulse width and angle of the servo directly correspond. Table turntable bearings are indeed easy to use.
 
 ### Coil
 
 Because the inner diameter of the tube equipped by the merchant is not 10mm (the title requires 10mm-15mm), we have to rewind. The plastic tube used for the tube. We decided to use a 10mm inner diameter after a simple discussion, and then the projectile also used a 10mm steel ball, because the first feeling is that the smaller the better, the smaller the less energy required. It turns out that sometimes the first feeling is not necessarily optimal. you can install a laser pointer on the barrel to facilitate debugging.
 
-![image](https://user-images.githubusercontent.com/117464811/231820351-0566b2e8-c7fd-4cfa-990d-da94fd772923.png)
+We decided to go around 8 layers, each layer 30 turns, a total of 240 turns. Under the guidance of the great god, this number of turns is within a reasonable range, 200-300 is fine. If the number of turns is large, the resistance will also be large, and the effect is not necessarily better.
 
-#### coil parameters
-we decided to go around 8 layers, each layer 30 turns, a total of 240 turns, and then after the guidance of the great god, this number of turns is within a reasonable range. If you go around, 200-300 is fine. If the number of turns is large, the resistance will also be large, and the effect is not necessarily better.
-
-#### The diameter of the enameled wire 
-we chose is 1mm, and some students use 0.8mm, which has been proved to be usable.
-
-If the enameled wire is not easy to fix, you can put on 502 glue, as for both sides, you can try electrical glue, or 3M tape stacked, or other things that can be stuck. We ended up carving the cards with an engraving machine.
-
-### Master and modules
-
-#### Master 
-
-Arduino UNO
-
-#### Visual 
-OPENMV. The image processing uses a simple algorithm to find color patches. The test is responsible for receiving the data of the module.
-
-#### Ranging 
-This is the laser ranging module. Some people use ultrasonic modules, which may not work well. OpenMV and laser ranging are placed on the first stage servo disk, only the yaw angle, and the laser ranging we rack to be about the same height as the marker.
-
-#### keyboard 
-The matrix keyboard that ordinary people use, we bought the serial port screen. The advantage of serial port screen is that it is simple and easy to use, and there is no need to write the row and column scanner of the matrix keyboard.
-
-![image](https://user-images.githubusercontent.com/117464811/231821414-18186a1d-1d53-4c85-b650-2d34a519d3a3.png)
-
-#### Gimbal 
-This online one has a nice job done. Ordinary two-servo ones can also be used, because we basically chose to put only the muzzle on the last stage of the servo. So the weight is not very large, and its requirements for the system are to be stable when shooting, after all, there are some small impacts, which will reduce the accuracy. Our group finally chose to use two 42-step servo motors as power, the advantage is that the torque is large, the disadvantage is that there must be a starting point of the card position, and the pulse width and angle of the servo directly correspond. Table turntable bearings are indeed easy to use.
-
-![image](https://user-images.githubusercontent.com/117464811/231821549-74fd50f2-a9c8-4ee3-9dfb-d0b5e30f064c.png)
+We chose is 1mm, which has been proved to be usable.
 
 ## Test debugging plus fill pits
 
