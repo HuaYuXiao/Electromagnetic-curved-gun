@@ -1,27 +1,6 @@
 # Electromagnetic-curved-gun
 
-![image](https://user-images.githubusercontent.com/117464811/231820176-466c884c-217b-484c-8af9-958f97e4cc85.png)
-
-## Basic modules
-
-### electromagnetic cannon
-
-No matter what the scoring point is, the electromagnetic cannon is a must. But we took advantage of it and bought a finished kit directly online. As shown in the picture.
-
-![image](https://user-images.githubusercontent.com/117464811/231820150-0d2388d1-ac9a-4043-a3d9-c709343d382c.png)
-
-The principle is still relatively simple, the boost charges the capacitor, and the capacitor generates a magnetic field through the coil, and the magnetic field attracts the steel ball. But after the stuff came back, we made some changes.
-
-### Gimbal 
-This online one has a nice job done. Ordinary two-servo ones can also be used, because we basically chose to put only the muzzle on the last stage of the servo. So the weight is not very large, and its requirements for the system are to be stable when shooting, after all, there are some small impacts, which will reduce the accuracy. Our group finally chose to use two 42-step servo motors as power, the advantage is that the torque is large, the disadvantage is that there must be a starting point of the card position, and the pulse width and angle of the servo directly correspond. Table turntable bearings are indeed easy to use.
-
-### Coil
-
-Because the inner diameter of the tube equipped by the merchant is not 10mm (the title requires 10mm-15mm), we have to rewind. The plastic tube used for the tube. We decided to use a 10mm inner diameter after a simple discussion, and then the projectile also used a 10mm steel ball, because the first feeling is that the smaller the better, the smaller the less energy required. It turns out that sometimes the first feeling is not necessarily optimal. you can install a laser pointer on the barrel to facilitate debugging.
-
-We decided to go around 8 layers, each layer 30 turns, a total of 240 turns. Under the guidance of the great god, this number of turns is within a reasonable range, 200-300 is fine. If the number of turns is large, the resistance will also be large, and the effect is not necessarily better.
-
-We chose is 1mm, which has been proved to be usable.
+![1D8443702C919EDBCE6AD8C5E8576A87](https://user-images.githubusercontent.com/117464811/235859354-06c15df1-6630-468f-8b30-a5f220c59daf.jpg)
 
 ## Test debugging plus fill pits
 
