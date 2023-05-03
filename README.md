@@ -1,5 +1,7 @@
 # Electromagnetic-curved-gun
 
+The principle is still relatively simple, the boost charges the capacitor, and the capacitor generates a magnetic field through the coil, and the magnetic field attracts the steel ball.
+
 ![1D8443702C919EDBCE6AD8C5E8576A87](https://user-images.githubusercontent.com/117464811/235859354-06c15df1-6630-468f-8b30-a5f220c59daf.jpg)
 
 ## Test debugging plus fill pits
