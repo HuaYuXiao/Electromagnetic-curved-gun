@@ -12,9 +12,6 @@ No matter what the scoring point is, the electromagnetic cannon is a must. But w
 
 The principle is still relatively simple, the boost charges the capacitor, and the capacitor generates a magnetic field through the coil, and the magnetic field attracts the steel ball. But after the stuff came back, we made some changes.
 
-### Ranging 
-This is the laser ranging module. Some people use ultrasonic modules, which may not work well. OpenMV and laser ranging are placed on the first stage servo disk, only the yaw angle, and the laser ranging we rack to be about the same height as the marker.
-
 ### Gimbal 
 This online one has a nice job done. Ordinary two-servo ones can also be used, because we basically chose to put only the muzzle on the last stage of the servo. So the weight is not very large, and its requirements for the system are to be stable when shooting, after all, there are some small impacts, which will reduce the accuracy. Our group finally chose to use two 42-step servo motors as power, the advantage is that the torque is large, the disadvantage is that there must be a starting point of the card position, and the pulse width and angle of the servo directly correspond. Table turntable bearings are indeed easy to use.
 
