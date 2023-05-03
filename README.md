@@ -12,13 +12,6 @@ No matter what the scoring point is, the electromagnetic cannon is a must. But w
 
 The principle is still relatively simple, the boost charges the capacitor, and the capacitor generates a magnetic field through the coil, and the magnetic field attracts the steel ball. But after the stuff came back, we made some changes.
 
-### Master 
-
-Arduino UNO
-
-### Visual 
-OPENMV. The image processing uses a simple algorithm to find color patches. The test is responsible for receiving the data of the module.
-
 ### Ranging 
 This is the laser ranging module. Some people use ultrasonic modules, which may not work well. OpenMV and laser ranging are placed on the first stage servo disk, only the yaw angle, and the laser ranging we rack to be about the same height as the marker.
 
